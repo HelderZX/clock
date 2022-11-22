@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/26acf264ae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="button-navigation">
+            <a href="watch.html">     <button class="nav-button off"> <i class="fa-solid fa-clock"></i>          </button></a>
+            <a href="timer.html">     <button class="nav-button on"> <i class="fa-solid fa-hourglass-half"></i> </button></a>
+            <a href="stopwatch.html"> <button class="nav-button off">  <i class="fa-solid fa-stopwatch"></i>      </button></a>
+        </div>
+        <div class="button-colorMode">
+            <i class="fa-solid fa-sun"></i>
+            <label class="switch">
+                <input type="checkbox" id="switch">
+                <span class="slider"></span>
+            </label>
+            <i class="fa-solid fa-moon"></i>
+        </div>
+    </nav>
+    <!-- clock -->
+    <section class="timer center">
+        <p id="clock" class="timer-text">
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+        </p>
+    </section>
+    <section class="center">
+        <button type="button" id="button-reset" class="button off">         <i class="fa-solid fa-rotate-right"></i> </button>
+        <button type="button" id="button-start"  class="button on">         <i class="fa-solid fa-play"></i>         </button>
+        <button type="button" id="button-stop" class="button off" disabled> <i class="fa-solid fa-stop"></i>         </button>
+    </section>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/times.js"></script>
+</body>
+</html>

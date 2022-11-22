@@ -1,0 +1,190 @@
+/* Colors */
+:root{
+    --color-text: black;
+    --color-text_hover: #3d3d3d;
+    --color_b1: #c7cfdd; 
+    --color_b3: #acb8cb;
+    --color_b2: #92a1b9;
+    --color_b2_click: #667682;
+
+    --color_neon_b1: #0cf1ff;
+    --color_neon_b1_click: #08acb2;
+}
+
+.dark-mode:root{
+    --color-text: #c7cfdd;
+    --color-text_hover: #b4b4b4;
+    --color_b1: #1a1932;
+    --color_b3: #222440;
+    --color_b2: #2a2f4e;
+    --color_b2_click: #222440;
+
+    --color_neon_b1: #0098dc;
+    --color_neon_b1_click: #007e9a;
+}
+
+/* Page */
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color_b1);
+    color: var(--color-text);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 20px 150px var(--color_b2);
+}
+
+i{
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.timer{
+    padding: 80px 0;
+}
+
+.timer-text{
+    font-size: 64px;
+    margin: 0;
+}
+
+.second-timer-text{
+    font-size: 36px;
+    margin: 0;
+    color: var(--color-text_hover);
+}
+
+.timer-text:hover{
+    color: var(--color_neon_b1);
+}
+
+/* Buttons */
+.button{
+    color: var(--color-text);
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 0px;
+    margin: 5px;
+}
+
+.button:disabled{
+    color: var(--color-text_hover);
+}
+
+.nav-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 0px;
+    margin: 5px;
+}
+
+button:hover{
+    border: 2px solid wheat;
+}
+
+.button-navigation{
+    
+}
+
+.on{
+    background-color: var(--color_neon_b1);
+}
+
+.off{
+    background-color: var(--color_b2);
+}
+
+.on:active{
+    background-color: var(--color_neon_b1_click);
+}
+
+.off:active{
+    background-color: var(--color_b2_click);
+}
+
+/* Toogle Switch */
+.switch{
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width: 60px;
+}
+
+.switch input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.slider{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--color_b2);
+    border-radius: 34px;
+    --webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: 4px;
+    left: 4px;
+    border-radius: 50%;
+    background-color: var(--color_neon_b1);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider{
+    background-color: var(--color_b2);
+}
+
+input:focus + .slider{
+    box-shadow: 0 0 1px var(--color_b2);
+}
+
+input:checked + .slider::before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: 26px;
+    transform: 26px;
+}
+
+.button-colorMode{
+    display: flex;
+    position: absolute;
+    right: 10px;
+}
+
+.button-colorMode i{
+    color: var(--color_b2);
+    font-size: 26px;
+    margin: 4px 4px;
+}
+
