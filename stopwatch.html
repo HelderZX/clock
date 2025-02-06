@@ -28,17 +28,6 @@
         </div>
     </nav>
     
-    <div class="sideBar">
-        <table class="table-laps">
-            <thead>
-                <th>Lap</th>
-                <th>Time</th>
-                <th>Total Time</th>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
     <!-- clock -->
     <section class="timer center">
         <div>
@@ -50,6 +39,7 @@
             </p>
         </div>
     </section>
+
     <section class="center">
         <button type="button" id="button-start"  class="button on">          <i class="fa-solid fa-play"></i>         </button>
         <button type="button" id="button-pause"  class="button on" hidden>   <i class="fa-solid fa-pause"></i>        </button>
@@ -57,6 +47,19 @@
         <button type="button" id="button-split" class="button off" disabled> Split                                    </button>
         <button type="button" id="button-reset" class="button off" hidden>   <i class="fa-solid fa-rotate-right"></i> </button>
     </section>
+    
+    <div class="sideBar">
+        <table class="table-laps">
+            <thead>
+                <th>Lap</th>
+                <th>Time</th>
+                <th>Total Time</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
     <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/stopwatch.js"></script>

@@ -1,14 +1,20 @@
 
 /* Switch Color Mode */
-var html = document.querySelector('html');
-var switch_colorMode = document.getElementById('switch');
-/*
-window.onload = function () {
-    var page = document.querySelector('html');
-    page.classList.add(localStorage.getItem("theme"));
+const html = document.querySelector('html');
+const switchColorMode = document.getElementById('switch');
+
+if(localStorage.getItem("theme") == 'dark-mode'){
+    switchColorMode.checked = true;
 }
-*/
-switch_colorMode.addEventListener('change', function(){
-    html.classList.toggle('dark-mode');
-    //localStorage.setItem('theme', html.classList);
+
+html.classList.add(localStorage.getItem("theme"));
+
+switchColorMode.addEventListener('change', function(){
+    if(switchColorMode.checked == false){
+        html.classList.remove('dark-mode');
+        localStorage.removeItem('theme');
+    }else{
+        html.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    }
 })
