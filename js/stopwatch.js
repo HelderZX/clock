@@ -67,6 +67,7 @@ window.onload = function () {
     
     /* Split */
     buttonSplit.onclick = function(){
+        if(table.querySelector('.empty')) table.querySelector('.empty').remove();
         if(appendMinutes.innerHTML != "00" || appendSeconds.innerHTML != "00" || appendMilliseconds.innerHTML != "00") saveTime();
         resetSecondTimer(second_interval);
         second_interval = setInterval(startSecondTimer, 10);
@@ -96,7 +97,11 @@ window.onload = function () {
 
         //clear historic
         id = 0;
-        table.querySelector('tbody').innerHTML = '';
+        table.querySelector('tbody').innerHTML = `
+            <tr class="empty">
+                <td colspan="3" style="text-align:center;">No laps</td>
+            </tr>
+        `;
 
         //change buttons
         buttonStart.removeAttribute('hidden');
