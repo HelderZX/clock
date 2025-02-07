@@ -66,6 +66,8 @@ i{
 }
 
 .timer-text{
+    display: flex;
+    align-items: center;
     font-size: 48px;
     margin: 0;
 }

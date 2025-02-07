@@ -158,6 +158,10 @@ window.onload = function () {
             input.textContent = input.textContent.slice(0, 2);
         }
 
+        if(parseInt(input.textContent) > 60) {
+            input.textContent = 60;
+        }
+
         const range = document.createRange();
         const selection = window.getSelection();
         range.selectNodeContents(input);
@@ -175,6 +179,10 @@ window.onload = function () {
             var currentValue = parseInt(input.textContent) || 0;
 
             var newValue = currentValue + 1;
+
+            if(newValue > 60) {
+                newValue = 60;
+            }
 
             input.textContent = newValue < 10 ? "0" + newValue : newValue;
         })
