@@ -29,16 +29,32 @@
     <!-- clock -->
     <section class="timer center">
         <p id="clock" class="timer-text">
-            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+            <div class="select-number">
+                <button class="plus"></button>
+                <span id="minutes" contenteditable="true">00</span>
+                <button class="minus"></button>
+            </div>
+            <span>:</span>
+            <div class="select-number">
+                <button class="plus"></button>
+                <span id="seconds" contenteditable="true">00</span>
+                <button class="minus"></button>
+            </div>
+            <span>:</span>
+            <div class="select-number">
+                <button class="plus"></button>
+                <span id="milliseconds" contenteditable="true">00</span>
+                <button class="minus"></button>
+            </div>
         </p>
     </section>
     <section class="center">
         <button type="button" id="button-reset" class="button off">         <i class="fa-solid fa-rotate-right"></i> </button>
         <button type="button" id="button-start"  class="button on">         <i class="fa-solid fa-play"></i>         </button>
-        <button type="button" id="button-stop" class="button off" disabled> <i class="fa-solid fa-stop"></i>         </button>
+        <button type="button" id="button-pause" class="button off" hidden> <i class="fa-solid fa-stop"></i>         </button>
     </section>
     <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/times.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 </html>

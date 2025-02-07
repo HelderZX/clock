@@ -107,11 +107,18 @@ i{
 }
 
 button:hover{
+    cursor: pointer;
     border: 2px solid wheat;
 }
 
-.button-navigation{
-    
+.select-number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-number *{
+    font-size: 64px;
 }
 
 .on{
@@ -196,3 +203,37 @@ input:checked + .slider::before{
     margin: 4px 4px;
 }
 
+.button-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+
+  .select-number button {
+    font-size: 30px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    background-color: transparent;
+    transform: rotate(90deg);
+    padding: 10px; color: var(--color-text);
+    
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 0px;
+    margin: 5px;
+  }
+  
+  .select-number .plus:before {
+    content: '\276E';
+  }
+  
+  .select-number .minus:before {
+    content: '\276F';
+  }
+  
+
+  .select-number button:hover {
+    filter: brightness(85%);
+  }
